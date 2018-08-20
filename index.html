@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prueba 360</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: 'PT Serif', serif;
+            margin: 0;
+        }
+
+        .main {
+            height: 300vh;
+        }
+
+        .bg {
+            z-index: -1;
+            position: fixed;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 80vh;
+        }
+
+        section {
+            z-index: 2;
+            height: 100vh;
+        }
+
+        .content {
+            font-size: 24px;
+            line-height: 1.5;
+            width: 360px;
+            margin: 100px 0;
+            padding-left: 50px;
+        }
+
+        .content.content--right {
+            float: right;
+            padding-right: 50px;
+            padding-left: 0;
+        }
+    </style>
+    <script type="text/javascript" src="vendor/libgif.js"></script>
+    <script type="text/javascript" src="vendor/rubbable.js"></script>
+</head>
+
+<body>
+    <div class="bg">
+        <img id="example1" src="Prueba360.gif" rel:animated_src="Prueba360.gif" width="600" height="600" rel:auto_play="0" rel:rubbable="1"
+        />
+    </div>
+    <div class="main" id="main">
+        <section>
+            <div class="content">
+                Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac
+                auctor orci leo non est. Morbi ac felis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                Praesent vestibulum dapibus.
+            </div>
+        </section>
+        <section>
+            <div class="content content--right">
+                Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac
+                auctor orci leo non est. Morbi ac felis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                Praesent vestibulum dapibus.
+            </div>
+        </section>
+        <section>
+            <div class="content">
+                Phasellus accumsan cursus velit. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac
+                auctor orci leo non est. Morbi ac felis. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                Praesent vestibulum dapibus.
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
