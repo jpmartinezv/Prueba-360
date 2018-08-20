@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var gif1 = new SuperGif({
         gif: document.getElementById('example1'),
-        max_width: 600,
+        max_width: $(window).height(),
         progressbar_height: 0
     });
 
