@@ -14,13 +14,17 @@ $(document).ready(function () {
         var h = $("#main").height() - $(window).height();
         var p = h / gif1.get_length();
 
-        $(window).scroll(function () {
-            var scroll_top = $(this).scrollTop();
+        function checkScroll(that) {
+
+            var scroll_top = $(that).scrollTop();
 
             var i = Math.floor(scroll_top / p);
-
-            console.log(i, gif1.get_length());
             gif1.move_to(i);
+        }
+
+        $(window).scroll(function () {
+            checkScroll(this);
         });
+        checkScroll(window);
     }
 });
