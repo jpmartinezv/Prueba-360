@@ -12,14 +12,14 @@ $(document).ready(function () {
 
     function init() {
         var h = $("#main").height() - $(window).height();
-        var p = h / gif1.get_length();
+        var p = 0.5 * h / gif1.get_length();
 
         function checkScroll(that) {
 
             var scroll_top = $(that).scrollTop();
 
             var i = Math.floor(scroll_top / p);
-            gif1.move_to(i);
+            gif1.move_to(i % gif1.get_length());
         }
 
         $(window).scroll(function () {
